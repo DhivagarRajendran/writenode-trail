@@ -23,7 +23,7 @@ export const Home = () => {
     }
     getPosts();
     
-  },[postsRef,toggle]);
+  },[postsRef,toggle,posts]);
 
   return (
     <section>

@@ -14,12 +14,10 @@ export const Home = () => {
   useEffect(()=>{
     async function getPosts(){
       const data = await getDocs(postsRef.current);
-      console.log(data.docs);
       setPosts(data.docs.map((document) => (
         {...document.data(), id: document.id}
         )
       ));
-      console.log(posts);
     }
     getPosts();
     
